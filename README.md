@@ -7,6 +7,6 @@ Date: 3/7/2013
 
 # Display slides
 
-[Clermont'ech Slides](https://rawgithub.com/devnied/NFC-slides-Clermontech/master/template.html)
+[Clermont'ech Slides](http://devnied.github.io/NFC-slides-Clermontech/)
 
 
