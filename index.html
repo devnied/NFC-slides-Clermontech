@@ -1,0 +1,287 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/clermontech_logo.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Introduction</h2>
+    </hgroup>
+    <article>
+      <img class="logo-right" src="images/NFC-Logo.png"/>
+      <ul>
+        <li>Basé sur la norme RFID</li>
+        <li>Communication courte distance (5-10 cm)</li>
+        <li>Plusieurs normes (ISO 14443)
+          <ul>
+            <li>14443 A et B</li>
+            <li>Felicia</li>
+          </ul>
+        </li>
+        <li class="space"></li>
+        <li>Vitesse de transfert de 106 à 424 kbit/s</li>
+        <li class="space"></li>
+        <li>Plusieurs modes de communication</li>
+        <li>Plusieurs types de support</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Différents supports</h2>
+    </hgroup>
+    <article>
+    <img class="logo-right logo-card" src="images/card.png"/>
+      <img class="logo-right logo-tags" src="images/tags.png"/>
+      <img class="logo-right image-left-second" src="images/lecteur.png"/>
+	  <img class="logo-right logo-right-cellphone" src="images/cellphone.png"/>
+	  
+      <h3>Passifs</h3>
+      <ul>
+		  <li>TAG(s) (plusieurs formes)</li>
+		  <li>Cartes</li>
+	  </ul>
+	  <br/>
+      <h3>Actifs</h3>
+      <ul>
+		  <li>Téléphones</li>
+		  <li>Lecteurs</li>
+		  <li>Objets connectés</li>
+	  </ul>
+    </article>
+  </slide>
+  
+    <slide>
+    <hgroup>
+      <h2>Types de tag</h2>
+    </hgroup>
+    <article>
+      <ul>
+		  <li>Lisible et/ou réinscriptible</li>
+		  <li>Capacité mémoire limitée</li>
+		  <li>ID unique</li>
+		  <li>Api propriétaire</li>
+	  </ul>
+	  <br/>
+	  <table>
+        <tr>
+          <th></th><th>Type 1</th><th>Type 2</th><th>Type 3</th><th>Type 4</th>
+        </tr>
+        <tr>
+          <td>Produits</td><td>Broadcom Topaz</td><td>NXP Mifare Ultralight</td><td>Sony Felicia</td><td>NXP Mifare DESFire, JCOP </td>
+        </tr>
+        <tr>
+          <td>Mémoire</td><td>96 Octets</td><td>48 - 144 Octets</td><td>1 - 8 Ko</td><td>4 - 32 Ko</td>
+        </tr>
+        <tr>
+          <td>Vitesse</td><td>106 Kbits/s</td><td>106 Kbits/s</td><td>212 ou 424 Kbits/s</td><td>212 à 424 Kbits/s</td>
+        </tr>
+        <tr>
+          <td>Prix</td><td>Faible</td><td>Faible</td><td>Faible</td><td>Élevé</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+  
+   <slide>
+    <hgroup>
+      <h2>Modes de communication</h2>
+    </hgroup>
+    <article>
+    <img class="logo-right" src="images/p2p.png"/>
+      <img class="logo-right image-left-second" src="images/le.png"/>
+      <img class="logo-right image-left-second" src="images/emul.png"/>
+	  
+      <h3>Peer to peer</h3>
+      <ul>
+		  <li>Communication entre deux périphériques</li>
+	  </ul>
+	  <br/>
+      <h3>Lecture/écriture</h3>
+      <ul>
+		  <li>Lecture/écriture d'un élément passif</li>
+	  </ul>
+	  <br/>
+	  <h3>Emulation de carte</h3>
+      <ul>
+		  <li>Périphérique émule un Tag passif</li>
+	  </ul>
+    </article>
+  </slide>
+  
+    <slide>
+    <hgroup>
+      <h2>NDEF (NFC Data Exchange Format)</h2>
+    </hgroup>
+    <article>
+    <img class="logo-right" src="images/forum.png"/>
+      <img class="logo-right logo-big image-left-second" src="images/ndef.png"/>
+      <ul>
+      	  <li>Défini par le NFC Forum</li>
+      	  <li>Consortium international</li>
+		  <li>Créé en 2004
+		  	<ul>
+		  		<li>Nokia, Philips et Sony</li>
+		  		<li>plus 160</li>
+		  	</ul>
+		  </li>
+		  <li class="space"></li>
+		  <li>Format d'échange des données NDEF</li>
+		  <li class="space"></li>
+		  <li>Plusieurs records
+		  	<ul>
+		  		<li>Un par OS (Syntaxe différentes)</li>
+		  	</ul>
+		  </li>
+		  <li class="space"></li>
+		  <li>Type (URI, text, URL, ...)</li>
+		  <li>Format (Utf-8, Utf-16, ISO 8859-1)</li>
+	  </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Utilisation en mobilité dans les transports</h2>
+    </hgroup>
+    <article>
+    <img class="logo-right" src="images/citizy.png"/>
+      <ul>
+		  <li>Lecture de tag</li>
+		  <li>Sécurité des informations (Secure element)
+		  	<ul>
+		  		<li>SE du téléphone<li>
+		  		<li>SE carte SD</li>
+		  		<li>SE SIM Centric</li>
+		  	</ul>
+		  </li>
+		  <li class="space"></li>
+		  <li>Ajoute des fonctionnalités logiciels aux téléphones
+		  	<ul>
+		  		<li>Accés à la carte SIM<li>
+		  		<li>lecture de la carte SIM sans batterie</li>
+		  	</ul>
+		  </li>
+		  <li class="space"></li>
+		  <li>Necessite la coopération des Opérateurs
+		  	<ul>
+		  		<li>AFSCM (Association française du Sans Contact Mobile)</li>
+		  		<li>Orange, SFR, Bouygues, NRJ mobile</li>
+		  	</ul>
+		  </li>
+	  </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Informations sur les TAGs</h2>
+    </hgroup>
+    <article>
+      <img class="logo-right" src="images/tag.png"/>
+      <h3>Faiblesses</h3>
+      <ul>
+		  <li>Pas de protection contre la copie</li>
+		  <li>Nombre d'écriture limité</li>
+		  <li>Sans protection il ne fonctionne pas sur le métal</li>
+		  <li>Interférence avec d'autre TAGs NFC</li>
+	  </ul>
+	  <br/>
+	  <h3>Avantages</h3>
+	  <ul>
+	  	<li>Identifiant d'un TAG non modifiable</li>
+		<li>Inscrit par le fabriquant</li>
+		<li>Prix peu élevé</li>
+	  </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Conclusion</h2>
+    </hgroup>
+    <article>
+      <ul>
+		  <li>Croissance forte du NFC en France</li>
+		  <li>Utilisation bridée du NFC sur certain OS</li>
+		  <li>Axe majeur de développent dans le transport
+		  	<ul>
+		  		<li>Nice</li>
+		  		<li>Caen</li>
+		  		<li>Strasbourg</li>
+		  		<li>Et d'autres ...</li>
+		  	</ul>
+		  </li>
+		  <li>Beaucoup d'utilisations possibles</li>
+		  <li>Coûteux à sécuriser sur mobile</li>
+	  </ul>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/clermontech_logo.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Merci !</h2>
+      <p>Contact:</p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-19411627-4']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
