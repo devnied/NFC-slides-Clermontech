@@ -7,6 +7,6 @@ Date: 3/7/2013
 
 # Display slides
 
-[Clermont'ech Slides](http://devnied.github.io/NFC-slides-Clermontech/)
+[Clermont'ech Slides](http://julien-millau.fr/NFC-slides-Clermontech/)
 
 
